@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-toolbar>
+        <span class="fill-remaining-space">Login</span>
+      </mat-toolbar>
+      
+      <div class="container"  novalidate> 
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="submitLoginData(loginForm.value)">
+                    <mat-form-field class="form-element" [style.width.px]=600>
+                        <input matInput placeholder="Email Address"  formControlName="emailAddress" type="email"
+                        autocomplete="off">
+                        <mat-error  *ngIf="loginForm.controls['emailAddress'].hasError('required')">
+                            Please enter email address.
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.controls['emailAddress'].hasError('pattern')">
+                            Please enter valid email address.
+                        </mat-error>
+
+                      </mat-form-field>               
+                    <mat-form-field class="form-element" [style.width.px]=600>
+                        <input matInput placeholder="Password" formControlName="password" type="password"
+                        autocomplete="off">
+                        <mat-error  *ngIf="loginForm.controls['password'].hasError('required')">
+                            Please Enter password.
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')">
+                            Minimum eight and maximum 10 characters, at least one
+                            uppercase letter, one lowercase letter, one number and one special character
+                        </mat-error>
+                    </mat-form-field>
+                    <div class="button">
+                        <span style="color: blue;">create new account ?</span>
+                        <button mat-raised-button color="primary"  class="btn btn-primary"
+                        [routerLink]="['/registration/user']">New User</button>
+                        <button mat-raised-button color="primary" type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                    
+        </form>
+      </div>
+</mat-card>
+
+
+  

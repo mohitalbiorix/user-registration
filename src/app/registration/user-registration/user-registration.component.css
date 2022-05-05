@@ -1,0 +1,40 @@
+.fill-remaining-space {
+
+    flex: 1 1 auto;
+    font-size: 30px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+  
+  .form-element {
+    padding: 17px 0px 25px 2px;
+    width: 100%;
+  }
+  
+  button{
+        width: 20%;
+        padding: 7px;
+        margin: 10px;
+        float: right;
+
+  }
+ 
+  mat-card{
+      width: 85%;
+      height: auto;
+      text-align: center;
+      left: 7%;
+      margin-top: 3%;
+      position: absolute;
+  }
+
+  mat-icon{
+    font-size: 34px;
+  }
+
+  mat-toolbar{
+    background-color: palevioletred;
+    border-radius: 5px 5px;
+  }
